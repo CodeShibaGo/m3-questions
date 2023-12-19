@@ -1,0 +1,132 @@
+name: Bug Report
+description: 報告一個錯誤以幫助我們改進
+title: "[BUG] "
+labels: ["bug"]
+assignees: ''
+body:
+  - type: markdown
+    attributes:
+      value: "## 描述錯誤\n清晰且簡明地描述錯誤是什麼。\n"
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "錯誤描述"
+      description: "請詳細描述你遇到的錯誤。"
+      placeholder: "在此詳細描述錯誤..."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## 重現步驟\n按照以下步驟重現錯誤：\n"
+
+  - type: textarea
+    id: reproduce-steps
+    attributes:
+      label: "重現步驟"
+      description: "描述重現錯誤的步驟。"
+      placeholder: "1. 前往 '...'\n2. 點擊 '...'\n3. 向下滾動到 '...'\n4. 看到錯誤"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "預期行為"
+      description: "清楚且簡明地描述你預期會發生的事情。"
+      placeholder: "在此描述預期行為..."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## 截圖\n如果適用，添加截圖來幫助解釋你的問題。\n"
+
+  - type: file
+    id: screenshots
+    attributes:
+      label: "截圖"
+      description: "如果可能，請添加幫助解釋問題的截圖。"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "## 桌面環境（請完成以下資訊）\n"
+
+  - type: input
+    id: desktop-os
+    attributes:
+      label: "作業系統"
+      description: "例如 iOS"
+      placeholder: "輸入你的作業系統"
+    validations:
+      required: true
+
+  - type: input
+    id: desktop-browser
+    attributes:
+      label: "瀏覽器"
+      description: "例如 Chrome、Safari"
+      placeholder: "輸入你使用的瀏覽器"
+    validations:
+      required: true
+
+  - type: input
+    id: desktop-version
+    attributes:
+      label: "版本"
+      description: "例如 22"
+      placeholder: "輸入瀏覽器的版本"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## 智慧型手機環境（請完成以下資訊）\n"
+
+  - type: input
+    id: smartphone-device
+    attributes:
+      label: "裝置"
+      description: "例如 iPhone6"
+      placeholder: "輸入你的裝置型號"
+    validations:
+      required: true
+
+  - type: input
+    id: smartphone-os
+    attributes:
+      label: "作業系統"
+      description: "例如 iOS8.1"
+      placeholder: "輸入你的作業系統"
+    validations:
+      required: true
+
+  - type: input
+    id: smartphone-browser
+    attributes:
+      label: "瀏覽器"
+      description: "例如 stock browser、safari"
+      placeholder: "輸入你使用的瀏覽器"
+    validations:
+      required: true
+
+  - type: input
+    id: smartphone-version
+    attributes:
+      label: "版本"
+      description: "例如 22"
+      placeholder: "輸入瀏覽器的版本"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "附加上下文"
+      description: "添加任何其他關於問題的上下文。"
+      placeholder: "在此添加其他上下文..."
+    validations:
+      required: false
