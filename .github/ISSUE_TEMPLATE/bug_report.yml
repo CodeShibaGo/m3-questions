@@ -1,45 +1,67 @@
-name: 錯誤報告
-description: 提交錯誤報告
-title: "[錯誤]: "
-labels: ["bug", "triage"]
-projects: ["octo-org/1", "octo-org/44"]
+name: 發問格式
+description: 請依照格式發問
+title: "[提問]"
+labels: ["question"]
+projects: []
 assignees:
   - octocat
 body:
   - type: markdown
     attributes:
       value: |
-        感謝你撥冗填寫此錯誤報告！
+        請先閱讀 [提問的智慧：教你如何正確的提出技術問題並獲得你滿意的答案。](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)。
+        為避免無效問題和冗餘問題，提問前請確認
+        - 確定 Google 不能解決你的問題
+        - 確定已有的 issue 不能解決你的問題
   - type: textarea
     id: what-happened
     attributes:
-      label: 發生了什麼？
-      description: 同時告訴我們，你期望發生什麼？
+      label: Describe the bug 描述你遇到的問題？
+      description: A clear and concise description of what the bug is. 簡潔有效的説明。
       placeholder: 告訴我們你看到了什麼！
-      value: "發生了一個錯誤！"
+      value: "發生了什麼樣的錯誤"
+    validations:
+      required: true
+  - type: textarea
+    id: to-reproduce
+    attributes:
+      label: To Reproduce 如何重現問題
+      description: Steps to reproduce the behavior 把你遇到的問題的發生步驟寫下來
+      placeholder: 重現問題的步驟，照著這個步驟做一定會出錯
+      value: 寫下問題發生的經過
     validations:
       required: true
   - type: dropdown
     id: browsers
     attributes:
       label: 你使用的瀏覽器是？
-      multiple: true
+      multiple: false
       options:
         - Firefox
         - Chrome
         - Safari
         - Microsoft Edge
+  - type: dropdown
+    id: os
+    attributes:
+      label: 你使用的作業系統是？
+      multiple: false
+      options:
+        - Windows
+        - Mac
+        - Linux
+        - Others
   - type: textarea
     id: logs
     attributes:
       label: 相關日誌輸出
-      description: 請複製並粘貼任何相關的日誌輸出。這將自動格式化為代碼，因此不需要使用反引號。
+      description: 請複製並 任何相關的日誌輸出。這將自動格式化為代碼，因此不需要使用反引號。
       render: shell
   - type: checkboxes
     id: terms
     attributes:
       label: 行為準則
-      description: 通過提交此問題，你同意遵循我們的[行為準則](https://example.com)
+      description: 通過提交此問題，你同意遵循我們的 [行為準則](https://example.com)
       options:
         - label: 我同意遵守這個項目的行為準則
           required: true
